@@ -53,6 +53,11 @@ def get_random_photo(img_queries):
     photos_dict = pexel.search_photos(random.choice(img_queries),
                                       size="small",
                                       per_page=NUMBER_OF_IMAGES)
+
+    # If no enough photos matching the query are found, run again with default tags
+    if not photos_dict.get("photos") or (len(photos_dict.get("photos")) < NUMBER_OF_IMAGES):
+        return get_random_photo(["Life", "Health", "Tech", "Goal", "Physics"])
+
     photo_index = random.randint(0, NUMBER_OF_IMAGES - 1)
     random_photo = photos_dict.get("photos")[photo_index]
     return random_photo

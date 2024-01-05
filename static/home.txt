@@ -1,0 +1,25 @@
+Get Image Route:
+
+Description: This route retrieves an image based on user interests.
+Endpoint: /get_image
+Example: /get_image?interests=Inspirational,Motivation,Life,Happy
+
+
+Mail Users Route:
+
+Description: This route sends emails to users based on specified frequency.
+Endpoint: /mail_users
+Example: /mail_users?frequency=Weekly
+
+
+Unsubscribe Route:
+
+Description: This route allows users to unsubscribe by providing their unique ID.
+Endpoint: /unsubscribe
+
+
+Add User Route:
+
+Description: This route adds a new user with specified details.
+Endpoint: /add_user
+Example: /add_user?name=Prakhar%20Aditya%20Tripathi&email=prakhar.ad.tr@gmail.com&interests=motivation,inspiration&frequency=Daily
