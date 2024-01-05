@@ -43,9 +43,4 @@ def add_user_route():
     
     return addUser(name, email, interests, frequency) #from user_management.py, returns success msg
 
-
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# Run: gunicorn app:app

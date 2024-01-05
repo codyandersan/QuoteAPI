@@ -26,11 +26,12 @@ def addUser(name, email, interests, frequency):
         "Frequency": frequency #Daily/Weekly/Fortnight/Monthly
     }
 
-    response =requests.post(url, headers=headers, json=data)
-    if response.status_code == 200:
-        return "User added successfully!"
+    response = requests.post(url, headers=headers, json=data)
+    
+    if response.status_code == 400:
+        return "Failed to add user. Error: " + response.text
     else:
-        return "Failed to add user. Error: " + str(response.text)
+        return "User added successfully!"
 
 
 def delete_user(id):
